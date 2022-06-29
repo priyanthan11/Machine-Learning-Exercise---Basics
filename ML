@@ -1,0 +1,37 @@
+import numpy as np
+from scipy import stats
+
+english = [65,43,72,67,83,45,79,34,37,89,92,64,35,92]
+
+#number of students offerd english subject
+i = 0
+for x in english:
+  i = i + 1
+
+print("Number of Students: ",i)
+
+# Mean Marks
+MeanMarks = np.mean(english)
+print("Mean marks  ", MeanMarks)
+
+#Median Marks
+MedianMarks = np.median(english)
+print("Medin marks: ", MedianMarks)
+
+#mode marks
+ModeMarks = stats.mode(english)
+print("Mode Marks: ",ModeMarks)
+
+#Standard Deviation (std)
+std = np.std(english)
+print("Standard Deviation is : ",std)
+
+#Variance 
+Vari = (np.std(english) * 2)
+
+print("Variance is:", Vari )
+
+#Z Score
+Z = (75 - 64)/ 20
+
+print("Z-Score is: ",Z)
